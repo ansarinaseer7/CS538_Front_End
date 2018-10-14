@@ -30,7 +30,7 @@ public class Project538Application {
 	static int counter = 0;
 
 	public static void main(String[] args) throws IOException {
-		
+		/*
 		String indexPath = "C:/Users/ansar/OneDrive/Documents/60-538/data/citeseer2_index";
 		String docsPath = "C:/Users/ansar/OneDrive/Documents/60-538/data/citeseer2";
 		System.out.println("Indexing to directory '" + indexPath + "'...");
@@ -39,7 +39,7 @@ public class Project538Application {
 		IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
 		IndexWriter writer = new IndexWriter(dir, iwc);
 		indexDocs(writer, Paths.get(docsPath));
-		writer.close();
+		writer.close();*/
 		
 		SpringApplication.run(Project538Application.class, args);
 	}

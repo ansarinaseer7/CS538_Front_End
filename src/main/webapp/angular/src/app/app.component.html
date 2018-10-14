@@ -1,24 +1,42 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-   	
-  </h1>
-</div>
-<div class="container">
-  <div class="jumbotron">
-    <h1>Welcome to 60-538 Project Demo</h1>
-   
-  </div>
-  <div class="panel panel-primary">
-    <div class="panel-heading">Search your paper</div>
-    <div class="panel-body">
-      <input type="text" class="form-control" placeholder="Enter your query" aria-label="Recipient's username" aria-describedby="basic-addon2">
-     <br><div class="d-table-cell align-middle">
+ <div  align="center">
+ 	<h4>Searh Engine</h4>
+ </div>
+ <div class="container">
+    <div class="input-group" style="margin-top:30px;">
+        <input class="form-control mr-1" >
+         <span class="input-group-btn">
         <button class="btn btn-primary">search</button>
+        </span>
     </div>
-    </div>
-  </div>
 </div>
+header
+<button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();"><i class="fa fa-plus"></i> Add</button> 
+<router-outlet></router-outlet>
+ <div class="container" *ngIf="results">
+  <hr size="300">
+    	<div class="col-12">
+	    	<div class="table-responsive">
+	    		<table class="table table-bordred table-striped">
+	    			<thead>
+	    				<tr>
+	    					<td style="font-weight: bold;">Id</td>
+	    					<td style="font-weight: bold;">Title</td>
+	    					<td style="font-weight: bold;">Citation</td>
+	    				</tr>
+	    			</thead>	
+	    			<tbody>
+	    				<tr *ngFor="let result of results">
+	    					<td>{{result.id}}</td>
+	    					<td>{{result.title}}</td>
+	    					<td>{{result.citation}}</td>
+	    				</tr>
+	    				
+	    			</tbody>
+	    		</table>
+	    	</div>
+	    </div>	
+    </div>
 
 
 
